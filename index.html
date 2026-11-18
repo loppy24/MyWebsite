@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Business | Professional Services</title>
+<title>NextGen Web Solutions | Professional Web Design</title>
+<meta name="description" content="NextGen Web Solutions creates modern, responsive and professional websites for businesses.">
 
 <style>
 * {
@@ -15,24 +16,27 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #f5f7fb;
-  color: #17243a;
+  color: #172033;
   line-height: 1.6;
+  background: #f8fafc;
 }
 
 header {
-  background: #101d35;
+  background: #07172e;
   color: white;
-  padding: 20px 8%;
+  padding: 18px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: bold;
+  color: #35c8f4;
 }
 
 nav a {
@@ -43,115 +47,198 @@ nav a {
 }
 
 nav a:hover {
-  color: #38bdf8;
+  color: #35c8f4;
 }
 
 .hero {
-  background: linear-gradient(120deg, #101d35, #1769aa);
-  color: white;
+  min-height: 570px;
+  padding: 110px 8%;
   text-align: center;
-  padding: 110px 20px;
+  color: white;
+  background: linear-gradient(120deg, #07172e, #075b91, #078db5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero h1 {
-  font-size: 45px;
-  margin-bottom: 18px;
+  font-size: clamp(38px, 6vw, 65px);
+  line-height: 1.15;
+  margin-bottom: 22px;
 }
 
 .hero p {
   font-size: 19px;
-  max-width: 650px;
-  margin: 0 auto 28px;
+  max-width: 700px;
+  margin-bottom: 30px;
 }
 
 .btn {
   display: inline-block;
-  background: #38bdf8;
-  color: #101d35;
-  padding: 13px 28px;
-  border-radius: 6px;
+  background: #35c8f4;
+  color: #07172e;
+  padding: 14px 28px;
+  border-radius: 7px;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s;
 }
 
 .btn:hover {
   background: white;
+  transform: translateY(-3px);
 }
 
 section {
-  padding: 75px 8%;
+  padding: 80px 8%;
   text-align: center;
 }
 
-section h2 {
-  font-size: 32px;
-  margin-bottom: 18px;
+.section-title {
+  font-size: 36px;
+  color: #07172e;
+  margin-bottom: 15px;
 }
 
-.about p {
-  max-width: 750px;
-  margin: auto;
+.section-intro {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #64748b;
 }
 
-.services {
+.about {
   background: white;
 }
 
-.service-grid {
+.services-grid, .portfolio-grid, .pricing-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
-  margin-top: 35px;
+  margin-top: 40px;
 }
 
-.service-card {
-  background: #f5f7fb;
-  padding: 30px 20px;
+.service-card, .portfolio-card, .price-card {
+  background: white;
+  padding: 30px 22px;
   border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+  transition: 0.3s;
 }
 
-.service-card h3 {
-  margin: 12px 0;
-  color: #1769aa;
+.service-card:hover, .portfolio-card:hover, .price-card:hover {
+  transform: translateY(-7px);
 }
 
-.icon {
-  font-size: 38px;
+.service-card h3, .portfolio-card h3, .price-card h3 {
+  color: #075b91;
+  margin-bottom: 12px;
+}
+
+.service-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.portfolio-card {
+  background: #eaf4fa;
+}
+
+.portfolio-card p {
+  margin-bottom: 15px;
+}
+
+.portfolio-card a {
+  color: #075b91;
+  font-weight: bold;
+}
+
+.pricing {
+  background: #eef5fa;
+}
+
+.price-card strong {
+  display: block;
+  font-size: 22px;
+  color: #087ba9;
+  margin: 15px 0;
+}
+
+.price-card ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.price-card li {
+  padding: 7px;
+  border-bottom: 1px solid #eee;
+}
+
+.price-card .btn {
+  margin-top: 15px;
 }
 
 .contact {
-  background: #eaf2fa;
+  background: white;
 }
 
-.contact p {
-  margin: 12px;
+.contact-box {
+  max-width: 650px;
+  margin: auto;
+  background: #07172e;
+  color: white;
+  padding: 40px 25px;
+  border-radius: 12px;
+}
+
+.contact-box p {
+  margin: 15px 0;
 }
 
 footer {
-  background: #101d35;
+  background: #07172e;
   color: white;
   text-align: center;
   padding: 25px;
 }
 
-@media (max-width: 600px) {
+.whatsapp {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  background: #25d366;
+  color: white;
+  padding: 14px 19px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 200;
+}
+
+@media(max-width: 700px) {
   header {
     flex-direction: column;
     gap: 15px;
   }
 
-  nav a {
-    margin: 7px;
-    display: inline-block;
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
   }
 
-  .hero h1 {
-    font-size: 32px;
+  nav a {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 80px 6%;
   }
 
   section {
-    padding: 55px 6%;
+    padding: 60px 6%;
   }
 }
 </style>
@@ -160,68 +247,169 @@ footer {
 <body>
 
 <header>
-  <div class="logo">My Business</div>
+  <div class="logo">NextGen Web Solutions</div>
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#pricing">Pricing</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<div class="hero" id="home">
-  <h1>Welcome to Our Business</h1>
-  <p>We provide professional, reliable and quality services to help you achieve your goals.</p>
-  <a href="#services" class="btn">Explore Our Services</a>
-</div>
+<section class="hero" id="home">
+  <h1>We Build Websites That Grow Your Business</h1>
+  <p>
+    Welcome to NextGen Web Solutions. We create modern,
+    professional and responsive websites that help businesses
+    establish their online presence and reach more customers.
+  </p>
+  <a href="#contact" class="btn">Start Your Project</a>
+</section>
 
 <section class="about" id="about">
-  <h2>About Our Business</h2>
-  <p>
-    We are committed to providing excellent services,
-    building strong relationships with our customers
-    and delivering quality in everything we do.
+  <h2 class="section-title">About NextGen</h2>
+  <p class="section-intro">
+    We are a web design business passionate about helping
+    individuals and businesses succeed in the digital world.
+    Our goal is to deliver attractive, user-friendly and
+    affordable website solutions.
   </p>
 </section>
 
-<section class="services" id="services">
-  <h2>Our Services</h2>
-  <p>Discover what we can do for you.</p>
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+  <p class="section-intro">
+    Everything you need to build a strong online presence.
+  </p>
 
-  <div class="service-grid">
-
+  <div class="services-grid">
     <div class="service-card">
-      <div class="icon">💻</div>
-      <h3>Web Design</h3>
-      <p>Beautiful and modern websites for businesses and individuals.</p>
+      <div class="service-icon">💻</div>
+      <h3>Website Design</h3>
+      <p>Beautiful and professional websites designed for your business.</p>
     </div>
 
     <div class="service-card">
-      <div class="icon">📱</div>
-      <h3>Mobile Friendly</h3>
+      <div class="service-icon">📱</div>
+      <h3>Responsive Design</h3>
       <p>Websites that work smoothly on phones, tablets and computers.</p>
     </div>
 
     <div class="service-card">
-      <div class="icon">⚙️</div>
-      <h3>Technical Support</h3>
-      <p>Reliable assistance to help keep your digital projects running.</p>
+      <div class="service-icon">🛒</div>
+      <h3>E-commerce Websites</h3>
+      <p>Online stores that help businesses showcase and sell products.</p>
     </div>
 
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>Website Maintenance</h3>
+      <p>Website updates, improvements and ongoing technical support.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="portfolio">
+  <h2 class="section-title">Our Portfolio</h2>
+  <p class="section-intro">
+    Explore examples of the types of websites we can create.
+    These are sample project concepts.
+  </p>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-card">
+      <h3>Business Website</h3>
+      <p>A modern website for a professional company.</p>
+      <a href="#contact">Request a similar website</a>
+    </div>
+
+    <div class="portfolio-card">
+      <h3>Restaurant Website</h3>
+      <p>A website to showcase menus and restaurant services.</p>
+      <a href="#contact">Request a similar website</a>
+    </div>
+
+    <div class="portfolio-card">
+      <h3>Online Store</h3>
+      <p>A digital shop designed to display products.</p>
+      <a href="#contact">Request a similar website</a>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <h2 class="section-title">Our Packages</h2>
+  <p class="section-intro">
+    Flexible website solutions based on your needs.
+    Contact us for a personalized quotation.
+  </p>
+
+  <div class="pricing-grid">
+    <div class="price-card">
+      <h3>Starter</h3>
+      <strong>Custom Quote</strong>
+      <ul>
+        <li>Simple business website</li>
+        <li>Mobile-friendly design</li>
+        <li>Basic contact section</li>
+      </ul>
+      <a href="#contact" class="btn">Get Quote</a>
+    </div>
+
+    <div class="price-card">
+      <h3>Professional</h3>
+      <strong>Custom Quote</strong>
+      <ul>
+        <li>Multi-section website</li>
+        <li>Modern design</li>
+        <li>Contact integration</li>
+        <li>Responsive layout</li>
+      </ul>
+      <a href="#contact" class="btn">Get Quote</a>
+    </div>
+
+    <div class="price-card">
+      <h3>Premium</h3>
+      <strong>Custom Quote</strong>
+      <ul>
+        <li>Advanced website features</li>
+        <li>E-commerce options</li>
+        <li>Custom design</li>
+        <li>Technical support</li>
+      </ul>
+      <a href="#contact" class="btn">Get Quote</a>
+    </div>
   </div>
 </section>
 
 <section class="contact" id="contact">
-  <h2>Contact Us</h2>
-  <p>Interested in working with us? Get in touch.</p>
-  <p>Email: your-email@example.com</p>
-  <a href="mailto:your-email@example.com" class="btn">Send Us an Email</a>
+  <h2 class="section-title">Let's Work Together</h2>
+  <p class="section-intro">
+    Have a project in mind? Get in touch and let's build
+    something amazing together.
+  </p>
+
+  <div class="contact-box">
+    <h2>NextGen Web Solutions</h2>
+    <p>Professional websites. Creative solutions. Digital growth.</p>
+    <p>Email: hello@nextgenwebsolutions.com</p>
+    <a class="btn" href="mailto:hello@nextgenwebsolutions.com">
+      Email Us
+    </a>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 My Business. All rights reserved.</p>
-  <p>Built with passion and dedication.</p>
+  <p>&copy; 2026 NextGen Web Solutions. All rights reserved.</p>
 </footer>
+
+<a class="whatsapp"
+   href="https://wa.me/254700000000"
+   target="_blank">
+   WhatsApp Us
+</a>
 
 </body>
 </html>
