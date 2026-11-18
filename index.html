@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My First Website</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        header {
+            background-color: #102a43;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #243b53;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #d9eaf7;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            color: #102a43;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .service {
+            background-color: white;
+            padding: 20px;
+            margin: 15px auto;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #102a43;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>MY BUSINESS WEBSITE</h1>
+        <p>Welcome to our website</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero" id="home">
+
+        <h1>Welcome to Our Business</h1>
+
+        <p>
+            We provide quality services
+            to help you achieve your goals.
+        </p>
+
+        <button onclick="welcomeMessage()">
+            Get Started
+        </button>
+
+    </div>
+
+    <section id="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            We are a business dedicated to
+            providing excellent services to our customers.
+        </p>
+
+    </section>
+
+    <section id="services">
+
+        <h2>Our Services</h2>
+
+        <div class="service">
+            <h3>Web Development</h3>
+            <p>We create professional websites.</p>
+        </div>
+
+        <div class="service">
+            <h3>Business Solutions</h3>
+            <p>We help businesses grow.</p>
+        </div>
+
+        <div class="service">
+            <h3>Online Services</h3>
+            <p>We provide digital solutions.</p>
+        </div>
+
+    </section>
+
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Email: example@email.com</p>
+
+        <p>Phone: 0700000000</p>
+
+    </section>
+
+    <footer>
+
+        <p>Copyright 2026 My Business Website</p>
+
+    </footer>
+
+    <script>
+
+        function welcomeMessage() {
+            alert("Welcome to our website!");
+        }
+
+    </script>
+
+</body>
+
+</html>
